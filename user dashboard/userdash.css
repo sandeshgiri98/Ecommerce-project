@@ -8,6 +8,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 body{
   background: rgb(226, 226, 226);
@@ -213,15 +214,16 @@ table thead tr{
 input
 {
   height: 35px;
-  width: 250px;
+  width: 400px;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  display: flex;
 }
 select
 {
-  height: 35px;
-  width: 15C0px;
+  height: 40px;
+  width: 400px;
   border-radius: 4px;
 }
 /* .first, .second{
@@ -231,4 +233,37 @@ select
 }
 .second{
   display: flex; */
-  
+  .ram_types{
+    display: flex;
+    align-content: space-between;
+    gap: 10%;
+  }
+  .ram_types select, .storage select
+  {
+    /* width: 200px; */
+    justify-content: space-evenly;
+    width: 200px;
+  }
+  .brand_info{
+    display: flex;
+    gap: 10%;
+    
+  }
+  .brand_info select{
+    justify-content: space-evenly;
+    width: 300px;
+  }
+  .storage
+  {
+    display: flex;
+    gap: 10%;
+  }
+  .price_list{
+    display: flex;
+    gap: 10%;
+  }
+  .price_list input{
+    
+    width: 200px;
+    justify-content: space-evenly;
+  }
