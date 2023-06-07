@@ -267,3 +267,7 @@ select
     width: 200px;
     justify-content: space-evenly;
   }
+
+  @media (max-width : 600px) {
+     
+  }
