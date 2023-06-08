@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="frontpage.css"/>
     <link rel="stylesheet" href="cart.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
 
 <div class="header">
   <span class="nav_left">
-      <img class="sliders" src="slider/home.png" alt="" style="width: 40px; height: auto" />
+      <img class="sliders" src="slider/logo3.svg" alt="" style="width: 60px; height: 50px; margin-right: 300px;" />
   </span>
   <nav>
       <ul class="nav_ul">
@@ -23,6 +23,7 @@
           <span><li><a href="#" class="ab">Gaming</a></li></span>
       </ul>
   </nav>
+  
 
   <span class="nav_right">
       <form action="">
@@ -44,6 +45,14 @@
           </a>
       </form>
   </span>
+  <div class="login_register">
+    <div>
+     <a href="../login/login.php" id="login_button">Login</a></p>
+    </div>
+    <div>
+      <a href="../register/Register.php" id="register_button">Register</a></p>
+    </div>
+  </div>
 </div>
 
 <!-- body -->
@@ -574,7 +583,7 @@
                     <div id="upperArrow">
                       <img src="slider/circle-up-solid.svg" alt="" class="to-top">
                     </div>
-                    <script src="dashboard.js"></script>
+                    <script src="frontpage.js"></script>
 
           <!-- <div id="popbx">
             <p>Our time is limited, so don't waste it living someone else's life. Don't be trapped by 

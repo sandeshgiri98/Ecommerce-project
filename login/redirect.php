@@ -42,7 +42,7 @@
         echo "<script>
                 document.getElementById('success-popup').style.display='block';
                 setTimeout(function(){ 
-                    window.location.href='../dashboard/dashboard.html'; 
+                    window.location.href='../admin_dashboard/admindashboard.php'; 
                 }, 1600);
             </script>";
     } else {

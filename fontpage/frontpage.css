@@ -25,23 +25,39 @@ color: none;
 }
 /* nav */
 .header {
-background-color:#262A56;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
+  background-color: #262A56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
 }
+
+.nav_ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+  margin-right: 200px;
+  
+}
+
 .nav_ul a {
-color: #ffffff;
-text-decoration: none;
-font-size: 1.1em;
-font-weight: bold;
-position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  position: relative;
 }
+
 .nav_ul a:hover {
-color: #fff4f4;
+  color: #fff4f4;
   padding-bottom: 4px;
 }
+
 .nav_ul a:hover::before {
   content: "";
   position: absolute;
@@ -52,6 +68,7 @@ color: #fff4f4;
   border-radius: 2px;
   animation: b_anim 200ms ease-in forwards;
 }
+
 @keyframes b_anim {
   0% {
     width: 0%;
@@ -60,30 +77,35 @@ color: #fff4f4;
     width: 100%;
   }
 }
-.nav_ul {
-  display: flex;
-  gap: 30px;
-  position: relative;
-}
+
 .nav_right {
   background-color: rgb(255, 255, 255);
   padding: 5px 10px 5px 20px;
   border-radius: 6px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  
 }
+
 .nav_right input {
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   padding: 3px;
 }
+
 .nav_right input:focus {
   outline: none;
 }
+
 .nav_left {
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
 }
+
 .search_notif {
   position: relative;
 }
+
 .search_notif span {
   position: absolute;
   width: 0.7rem;
@@ -100,6 +122,7 @@ color: #fff4f4;
   padding: 1px;
   opacity: 0.9;
 }
+
 /*========================*/
 
 /*body*/
@@ -459,4 +482,24 @@ section{
   height: 400px;
   width: 99%;
   margin-top: 20px;
+}
+/* login and register button */
+.login_register {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_register a {
+  margin-right: 50px;
+  margin-left: 50px;
+  color: white;
+  text-decoration: none;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.login_register a:hover {
+  color: #ff0000;
 }

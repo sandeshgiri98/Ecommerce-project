@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>User Dashboard</title>
-  <link rel="stylesheet" href="userdash.css" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admindash.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -50,7 +50,8 @@
         <div class="product-details">
           <h1 class="product-heading">Product Details</h1>
           <div class="product-adding-form">
-            <form action="../user dashboard/redirect.php" method="POST">
+            <form action="../admin_dashboard/redirect.php" method="POST">
+              <!------------------------------------------------------------------------------------------------->
                 <div class="product-form-fill">
                 <div class="brand_info">
                       <div class="brand">
@@ -70,10 +71,11 @@
                           <option value="razer">Razer</option>
                         </select>
                       </div>
+                      <!------------------------------------------------------------------------------------------------->
                       <div class="laptop_types">
                         <label for="laptop-type">Select Laptop Type</label>
-                        <select name="laptop-type" id="laptop-type"  name="laptop_type" required>
-                        <option value="" disabled selected>Select</option>
+                        <select id="laptop-type"  name="laptop_type" required>
+                            <option value="" disabled selected>Select</option>
                             <option value="Gaming Laptop">Gaming Laptop</option>
                             <option value="Notebook">Notebook</option>
                             <option value="Ultraportable">Ultraportable</option>
@@ -86,6 +88,7 @@
                       </div>
                     </div>
                     <br>
+                    <!------------------------------------------------------------------------------------------------->
                     <label for="name">Product Name</label>
                     <input type="text" id="name" name="name" required>
                     <br>
@@ -94,6 +97,7 @@
                     <select id="graphics_card" name="graphics_card">
                     <option value="" disabled selected>Select</option>
                       <optgroup label="NVIDIA GeForce RTX Series">
+                       <option value="None">None</option>
                         <option value="GeForce RTX 4090">GeForce RTX 4090</option>
                         <option value="GeForce RTX 4080Ti">GeForce RTX 4080Ti</option>
                         <option value="GeForce RTX 4080">GeForce RTX 4080</option>
@@ -137,6 +141,73 @@
                     </select>
                     <br>
                     <!------------------------------------------------------------------------------------------------->
+                    <label for="processor">Select a Processor:</label>
+                    <select id="processor" name="processor" required>
+                        <option value="">Select Processor</option>
+                        
+                        <optgroup label="Intel Core 13th Gen">
+                            <option value="i9">Intel Core i9 (13th Gen)</option>
+                            <option value="i7">Intel Core i7 (13th Gen)</option>
+                            <option value="i5">Intel Core i5 (13th Gen)</option>
+                            <option value="i3">Intel Core i3 (13th Gen)</option>
+                        </optgroup>
+                        <optgroup label="Intel Core 12th Gen">
+                            <option value="i9">Intel Core i9 (12th Gen)</option>
+                            <option value="i7">Intel Core i7 (12th Gen)</option>
+                            <option value="i5">Intel Core i5 (12th Gen)</option>
+                            <option value="i3">Intel Core i3 (12th Gen)</option>
+                        </optgroup>
+                        <optgroup label="Intel Core 10th Gen">
+                            <option value="i9">Intel Core i9 (10th Gen)</option>
+                            <option value="i7">Intel Core i7 (10th Gen)</option>
+                            <option value="i5">Intel Core i5 (10th Gen)</option>
+                            <option value="i3">Intel Core i3 (10th Gen)</option>
+                        </optgroup>
+                        <optgroup label="Intel Core 9th Gen">
+                            <option value="i9">Intel Core i9 (9th Gen)</option>
+                            <option value="i7">Intel Core i7 (9th Gen)</option>
+                            <option value="i5">Intel Core i5 (9th Gen)</option>
+                            <option value="i3">Intel Core i3 (9th Gen)</option>
+                        </optgroup>
+                        
+                        <optgroup label="AMD Ryzen">
+                            <option value="9">AMD Ryzen 9</option>
+                            <option value="7">AMD Ryzen 7</option>
+                            <option value="5">AMD Ryzen 5</option>
+                            <option value="3">AMD Ryzen 3</option>
+                            <option value="Threadripper">AMD Ryzen Threadripper</option>
+                        </optgroup>
+                        
+                        <optgroup label="Apple M">
+                            <option value="M1">Apple M1 </option>
+                            <option value="M1X">Apple M1X </option>
+                            <option value="M2">Apple M2 </option>
+                        </optgroup>
+                        
+                        <optgroup label="Qualcomm Snapdragon">
+                            <option value="Snapdragon 8">Qualcomm Snapdragon 8 </option>
+                            <option value="Snapdragon 7">Qualcomm Snapdragon 7 </option>
+                            <option value="Snapdragon 6">Qualcomm Snapdragon 6 </option>
+                        </optgroup>
+                        
+                        <optgroup label="IBM POWER">
+                            <option value="POWER9">IBM POWER9</option>
+                            <option value="POWER10">IBM POWER10</option>
+                        </optgroup>
+                        
+                        <optgroup label="NVIDIA Tegra">
+                            <option value="Tegra X1">NVIDIA Tegra X1 </option>
+                            <option value="Tegra X2">NVIDIA Tegra X2 </option>
+                        </optgroup>
+                        
+                        <optgroup label="ARM Cortex">
+                            <option value="Cortex-A">ARM Cortex-A </option>
+                            <option value="Cortex-R">ARM Cortex-R</option>
+                            <option value="Cortex-M">ARM Cortex-M</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <!------------------------------------------------------------------------------------------------->
                     <label for="ram">RAM</label>
                     <div class="ram_types">
                       <div class="ram_gb">
@@ -174,11 +245,13 @@
                       </div>
                     </div>
                     <br>
+                    <!------------------------------------------------------------------------------------------------->
                      <div class="storage">
                       <div class="ssd_storage_types">
                         <label for="ssd">SSD Storage</label>
-                        <select name="ssd" id="ssd" >
+                        <select id="ssd" name="ssd" >
                           <option value="" disabled selected>Select</option>
+                          <option value="None">None</option>
                           <option value="128GB">128GB SSD</option>
                           <option value="250GB">250GB SSD</option>
                           <option value="500GB">500GB SSD</option>
@@ -190,6 +263,7 @@
                       <label for="ssd_types">SSD Types</label>
                         <select name="ssd_types" id="ssd_types">
                           <option value="" disabled selected>Select</option>
+                          <option value="None">None</option>
                           <option value="NVMe">NVMe SSD</option>
                           <option value="SATA">SATA SSD</option>
                           <option value="M.2">M.2 SSD</option>
@@ -199,8 +273,9 @@
                       </div>
                       <div class="hdd_types">
                         <label for="hdd">HDD Storage</label>
-                        <select name="memory_size" id="memory_size">
+                        <select id="memory_size" name="memory_size">
                         <option value="" disabled selected>Select</option>
+                        <option value="None">None</option>
                         <option value="128 GB">128 GB</option>
                         <option value="256 GB">256 GB</option>
                         <option value="512 GB">512 GB</option>
@@ -212,6 +287,7 @@
                       </div>
                      </div>
                      <br>
+                     <!------------------------------------------------------------------------------------------------->
                       <div class="price_list">
                         <div>
                           <label for="main-price">Main Price</label>
@@ -229,8 +305,9 @@
                       </div>
                         <br>
                         <h1>Upload Product Photo</h1>
-                        <input type="file" id="photoInput" name="image" accept="image/*">
+                        <input type="file" id="photoInput" name="image" accept="image/*" required>
                     </div>
+                    <!------------------------------------------------------------------------------------------------->
                 <button type="submit">Submit    
             </form>
           </div>

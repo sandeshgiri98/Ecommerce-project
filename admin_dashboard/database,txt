@@ -1,0 +1,18 @@
+Create table product_details(
+    id int primary key not null auto_increment,
+    brand varchar(50),
+    laptoptypes varchar(50),
+    name varchar(50),
+    graphicscard varchar(50),
+    processor varchar(50),
+    ram varchar(50),
+    ddr varchar(50),
+    mhz varchar(50),
+    ssd varchar(50),
+    ssdtypes varchar(50),
+    memorysize varchar(50),
+    mainprice int,
+    discountprice int,
+    offerprice int,
+    image varchar(50)
+);
