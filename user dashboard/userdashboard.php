@@ -55,7 +55,8 @@
                 <div class="brand_info">
                       <div class="brand">
                         <label for="brand">Brand</label>
-                        <select id="brand" name="brand">
+                        <select id="brand" name="brand" required>
+                        <option value="" disabled selected>Select</option>
                           <option value="asus">Asus</option>
                           <option value="dell">Dell</option>
                           <option value="hp">HP</option>
@@ -69,9 +70,10 @@
                           <option value="razer">Razer</option>
                         </select>
                       </div>
-                      <div class="types_laptop">
+                      <div class="laptop_types">
                         <label for="laptop-type">Select Laptop Type</label>
-                        <select name="laptop-type" id="laptop-type">
+                        <select name="laptop-type" id="laptop-type"  name="laptop_type" required>
+                        <option value="" disabled selected>Select</option>
                             <option value="Gaming Laptop">Gaming Laptop</option>
                             <option value="Notebook">Notebook</option>
                             <option value="Ultraportable">Ultraportable</option>
@@ -85,12 +87,61 @@
                     </div>
                     <br>
                     <label for="name">Product Name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
                     <br>
+                    <!------------------------------------------------------------------------------------------------->
+                    <label for="graphics_card">Select Graphics Card</label>
+                    <select id="graphics_card" name="graphics_card">
+                    <option value="" disabled selected>Select</option>
+                      <optgroup label="NVIDIA GeForce RTX Series">
+                        <option value="GeForce RTX 4090">GeForce RTX 4090</option>
+                        <option value="GeForce RTX 4080Ti">GeForce RTX 4080Ti</option>
+                        <option value="GeForce RTX 4080">GeForce RTX 4080</option>
+                        <option value="GeForce RTX 4070Ti">GeForce RTX 4070Ti</option>
+                        <option value="GeForce RTX 4070">GeForce RTX 4070</option>
+                        <option value="GeForce RTX 4060Ti">GeForce RTX 4060Ti</option>
+                        <option value="GeForce RTX 4060">GeForce RTX 4060</option>
+                        <option value="GeForce RTX 4050Ti">GeForce RTX 4050Ti</option>
+                        <option value="GeForce RTX 4050">GeForce RTX 4050</option>
+                        <option value="GeForce RTX 3090Ti">GeForce RTX 3090Ti</option>
+                        <option value="GeForce RTX 3090">GeForce RTX 3090</option>
+                        <option value="GeForce RTX 3080Ti">GeForce RTX 3080Ti</option>
+                        <option value="GeForce RTX 3080">GeForce RTX 3080</option>
+                        <option value="GeForce RTX 3070Ti">GeForce RTX 3070Ti</option>
+                        <option value="GeForce RTX 3070">GeForce RTX 3070</option>
+                        <option value="GeForce RTX 3060 Ti">GeForce RTX 3060 Ti</option>
+                        <option value="GeForce RTX 3060">GeForce RTX 3060</option>
+                        <option value="GeForce RTX 3050 Ti">GeForce RTX 3050 Ti</option>
+                        <option value="GeForce RTX 3050">GeForce RTX 3050</option>
+                      </optgroup>
+                      <optgroup label="NVIDIA GeForce GTX Series">
+                        <option value="GeForce GTX 1660 Ti">GeForce GTX 1660 Ti</option>
+                        <option value="GeForce GTX 1660 Super">GeForce GTX 1660 Super</option>
+                        <option value="GeForce GTX 1660">GeForce GTX 1660</option>
+                        <option value="GeForce GTX 1650 Super">GeForce GTX 1650 Super</option>
+                        <option value="GeForce GTX 1650">GeForce GTX 1650</option>
+                      </optgroup>
+                      <optgroup label="AMD Radeon RX Series">
+                        <option value="Radeon RX 6900 XT">Radeon RX 6900 XT</option>
+                        <option value="Radeon RX 6800 XT">Radeon RX 6800 XT</option>
+                        <option value="Radeon RX 6800">Radeon RX 6800</option>
+                        <option value="Radeon RX 6700 XT">Radeon RX 6700 XT</option>
+                        <option value="Radeon RX 6600 XT">Radeon RX 6600 XT</option>
+                        <option value="Radeon RX 6600">Radeon RX 6600</option>
+                      </optgroup>
+                      <optgroup label="Intel Xe Graphics Series">
+                        <option value="Intel Iris Xe Graphics G7">Intel Iris Xe Graphics G7</option>
+                        <option value="Intel Iris Xe Graphics G4">Intel Iris Xe Graphics G4</option>
+                        <option value="Intel UHD Graphics Xe G4">Intel UHD Graphics Xe G4</option>
+                      </optgroup>
+                    </select>
+                    <br>
+                    <!------------------------------------------------------------------------------------------------->
                     <label for="ram">RAM</label>
                     <div class="ram_types">
                       <div class="ram_gb">
-                        <select name="ram" id="ram">
+                        <select name="ram" id="ram" required>
+                        <option value="" disabled selected>Select</option>
                         <option value="4GB">4GB</option>
                         <option value="8GB">8GB</option>
                         <option value="16GB">16GB</option>
@@ -99,14 +150,16 @@
                         </select>
                       </div>
                       <div class="ram_ddr">
-                        <select name="ddr" id="ddr">
+                        <select name="ddr" id="ddr" required>
+                          <option value="" disabled selected>Select</option>
                           <option value="DDR3">DDR3</option>
                           <option value="DDR4">DDR4</option>
                           <option value="DDR5">DDR5</option>
                         </select>
                       </div>
                       <div class="ram_mhz">
-                        <select name="mhz" id="mhz">
+                        <select name="mhz" id="mhz" required>
+                          <option value="" disabled selected>Select</option>
                           <option value="2400">2400 MHz</option>
                           <option value="2666">2666 MHz</option>
                           <option value="3000">3000 MHz</option>
@@ -124,7 +177,8 @@
                      <div class="storage">
                       <div class="ssd_storage_types">
                         <label for="ssd">SSD Storage</label>
-                        <select name="ssd" id="ssd">
+                        <select name="ssd" id="ssd" >
+                          <option value="" disabled selected>Select</option>
                           <option value="128GB">128GB SSD</option>
                           <option value="250GB">250GB SSD</option>
                           <option value="500GB">500GB SSD</option>
@@ -135,6 +189,7 @@
                       <div class="ssd_types">
                       <label for="ssd_types">SSD Types</label>
                         <select name="ssd_types" id="ssd_types">
+                          <option value="" disabled selected>Select</option>
                           <option value="NVMe">NVMe SSD</option>
                           <option value="SATA">SATA SSD</option>
                           <option value="M.2">M.2 SSD</option>
@@ -144,7 +199,8 @@
                       </div>
                       <div class="hdd_types">
                         <label for="hdd">HDD Storage</label>
-                        <select name="memory-size" id="memory-size">
+                        <select name="memory_size" id="memory_size">
+                        <option value="" disabled selected>Select</option>
                         <option value="128 GB">128 GB</option>
                         <option value="256 GB">256 GB</option>
                         <option value="512 GB">512 GB</option>
@@ -159,11 +215,11 @@
                       <div class="price_list">
                         <div>
                           <label for="main-price">Main Price</label>
-                          <input type="number" id="main-price" name="main-price">
+                          <input type="number" id="main-price" name="main-price" required>
                         </div>
                         <div>
                           <label for="discount-price">Discount Price</label>
-                          <input type="number" id="discount-price" name="discount-price">
+                          <input type="number" id="discount-price" name="discount-price" >
                         </div>
                        
                         <div>
