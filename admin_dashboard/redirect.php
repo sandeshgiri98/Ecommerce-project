@@ -29,7 +29,7 @@ include_once('../admin_dashboard/connection.php');
   $query = $con->query($sql);
   
   if ($query) {
-      echo "Data inserted";
+      header("location:../admin_dashboard/product_details.php");
   } else {
       echo "Error: " . $con->error;
   }
